@@ -53,7 +53,7 @@ class ImageDataset(torch.utils.data.Dataset):
             ]
 
         transforms_list.extend([
-            transforms.CenterCrop(256),
+            transforms.CenterCrop(200),
             transforms.ToTensor()
         ])
         self.transforms = transforms.Compose(transforms_list)
