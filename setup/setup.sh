@@ -29,9 +29,9 @@ if [[ -n ${4} ]]; then
   scp -r ${4} ${PUBLIC_DNS}:~
 fi
 
-scp get_data.sh ${PUBLIC_DNS}:~
-scp ../train_and_inference.py ${PUBLIC_DNS}:~
-scp ../sample_submission.csv ${PUBLIC_DNS}:~
+scp setup/get_data.sh ${PUBLIC_DNS}:~
+scp train_and_inference.py ${PUBLIC_DNS}:~
+scp sample_submission.csv ${PUBLIC_DNS}:~
 
 # setup ec2 instance and forward ec2 port to localhost
 ssh -L localhost:8888:localhost:8888 ${PUBLIC_DNS} <<ENDSSH
